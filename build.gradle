@@ -68,6 +68,7 @@ task jmhQuick(dependsOn: [buildConf, jmhJar], type: JavaExec) {
 }
 
 run {
+    jvmArgs = ["-Xmx8g"]
     dependsOn buildConf
     mainClassName = 'searchengine.Main'
 }
